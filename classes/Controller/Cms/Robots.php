@@ -10,6 +10,8 @@ class Controller_Cms_Robots extends Controller_Cms
 
     public function before()
     {
+        parent::before();
+
         $this->authorization('manage_robots');
 
         $this->robotsFile = new Boom\RobotsFile();
