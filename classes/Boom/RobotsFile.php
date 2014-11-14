@@ -2,6 +2,7 @@
 
 namespace Boom;
 
+use DB;
 use Kohana;
 use Boom\Person\Person;
 
