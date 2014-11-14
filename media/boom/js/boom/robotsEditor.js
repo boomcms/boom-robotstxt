@@ -8,9 +8,15 @@ $.widget('ui.robotsEditor', {
 	bind : function() {
 		var robotsEditor = this;
 
-		this.element.on('click', '#b-robots-save', function() {
-			robotsEditor.save();
-		});
+		this.element
+			.on('click', '#b-robots-save', function() {
+				robotsEditor.save();
+			})
+			.find('textarea')
+			.css({
+				width : document.documentElement.clientWidth - 20,
+				height :  document.documentElement.clientHeight - 110
+			});
 	},
 
 	save : function() {

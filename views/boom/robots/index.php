@@ -14,7 +14,7 @@
 
 	<?= Boom::include_js() ?>
     <?= Assets::factory('boom-robots')
-        ->js('robotsEditor')
+        ->js('robotsEditor.js')
         ->css('robots.css.less')
     ?>
 
