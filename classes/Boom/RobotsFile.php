@@ -35,7 +35,9 @@ class RobotsFile
         $results = DB::select('rules')
             ->from('robots')
             ->order_by('id', 'desc')
-            ->limit(1);
+            ->limit(1)
+            ->execute()
+            ->as_array();
 
         return isset($results[0]) ? $results[0]['rules'] : "";
     }
