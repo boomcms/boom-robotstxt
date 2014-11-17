@@ -3,8 +3,8 @@
 namespace Boom;
 
 use DB;
-use Kohana;
 use Boom\Person\Person;
+use Boom\Boom;
 
 class RobotsFile
 {
@@ -48,7 +48,7 @@ class RobotsFile
      */
     public function render()
     {
-        if (Kohana::$environment === Kohana::PRODUCTION) {
+        if (Boom::instance()->getEnvironment()->isProduction()) {
             return $this->getProductionRules();
         } else {
             return $this->getDevelopmentRules();
