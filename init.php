@@ -1,7 +1,7 @@
 <?php
 
-Route::set('boom-sitemap', 'robots.txt')
-	->defaults(array(
-		'controller' => 'robots',
+Route::set('boom-robotstxt', 'robots.txt')
+    ->defaults(array(
+        'controller' => 'robots',
         'action' => 'view'
-	));
+    ));
