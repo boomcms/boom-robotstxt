@@ -2,7 +2,7 @@
     "name": "boomcms/boom-robotstxt",
     "description": "robots.txt generator for BoomCMS",
     "require": {
-        "boomcms/boom-core": "2.0.*"
+        "boomcms/boom-core": "2.*"
     },
     "license": "BSD-3-Clause",
     "authors": [
