@@ -12,7 +12,7 @@ class ServiceProvider extends BaseServiceProvider
 	 *
 	 * @return void
 	 */
-    public function boot(Router $router, Asset\Provider $assetProvider, Page\Provider $pageProvider)
+    public function boot(Router $router)
     {
         $this->loadViewsFrom(__DIR__ . '/../../views/boom', 'boom');
 		$this->loadTranslationsFrom(__DIR__ . '/../../lang', 'boom');
