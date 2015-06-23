@@ -1,10 +1,10 @@
 <?php
 
-namespace Boom;
+namespace BoomCMS\Robots;
 
-use DB;
-use Boom\Person\Person;
-use Boom\Boom;
+use BoomCMS\Core\Person\Person;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\DB;
 
 class RobotsFile
 {
@@ -32,14 +32,12 @@ class RobotsFile
      */
     public function getProductionRules()
     {
-        $results = DB::select('rules')
-            ->from('robots')
-            ->order_by('id', 'desc')
-            ->limit(1)
-            ->execute()
-            ->as_array();
+        $results = DB::table('robots')
+			->select('rules')
+			->orderBy('edited_at', 'desc')
+			->first();
 
-        return isset($results[0]) ? $results[0]['rules'] : "";
+        return isset($results['rules']) ? $results['rules'] : "";
     }
 
     /**
@@ -48,28 +46,25 @@ class RobotsFile
      */
     public function render()
     {
-        if (Boom::instance()->getEnvironment()->isProduction()) {
-            return $this->getProductionRules();
-        } else {
-            return $this->getDevelopmentRules();
-        }
+        return (App::environment('production')) ?
+			$this->getProductionRules()
+			: $this->getDevelopmentRules();
     }
 
     /**
      *
      * @param string $rules
      * @param Person $person
-     * @return \Boom\RobotsFile
+     * @return RobotsFile
      */
     public function saveRules($rules, Person $person)
     {
-        DB::insert('robots', ['rules', 'edited_by', 'edited_at'])
-            ->values([
-                trim(strip_tags($rules)),
-                $person->getId(),
-                time()
-            ])
-            ->execute();
+		DB::table('robots')
+			->insert([
+				'rules' => trim(strip_tags($rules)),
+				'edited_by' => $person->getId(),
+				'edited_at' => time(),
+			]);
 
         return $this;
     }

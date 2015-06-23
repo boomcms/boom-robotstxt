@@ -1,9 +1,9 @@
-	<?= View::factory('boom/header', ['title' => 'Robots.txt Editor'])?>
-	<?= new \Boom\Menu\Menu ?>
+	<?= View::make('boom::header', ['title' => 'Robotst.txt file']) ?>
+	<?= $menu ?>
 
 	<div id="b-topbar" class="b-toolbar">
-		<?= new \Boom\UI\MenuButton() ?>
-		<?= new \Boom\UI\Button('accept', __('Save'), ['id' => 'b-robots-save', 'class' => 'b-button-withtext']) ?>
+		<?= $menuButton() ?>
+		<?= $button('accept', 'Save', ['id' => 'b-robots-save', 'class' => 'b-button-withtext']) ?>
 	</div>
 
 	<div id="b-robots">
@@ -12,18 +12,20 @@
 		</form>
 	</div>
 
-	<?= Boom::include_js() ?>
-    <?= Assets::factory('boom-robots')
-        ->js('robotsEditor.js')
-        ->css('robots.css.less')
-    ?>
+	<style type="text/css">
+		textarea {
+			position: absolute;
+			margin: 10px;
+			border: 1px solid #222;
+		}
+	</style>
 
+	<?= $boomJS ?>
+	<script type="text/javascript" src="/vendor/boomcms/boom-robotstxt/js/robotsEditor.js"></script>
 	<script type="text/javascript">
 		//<![CDATA[
 		(function($){
-			$.boom.init({
-                csrf : '<?= Security::token() ?>'
-             });
+			$.boom.init();
 
 			$('body').robotsEditor();
 		})(jQuery);
