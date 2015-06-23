@@ -1,12 +1,17 @@
 <?php
 
-class Controller_Robots extends Controller
+namespace BoomCMS\Robots\Controllers;
+
+use BoomCMS\Robots\RobotsFile;
+use Illuminate\Http\Response;
+use Illuminate\Routing\Controller;
+
+class Robots extends Controller
 {
-	public function action_view()
+	public function view()
 	{
-		// Set an content-type header.
-		$this->response
-			->headers('Content-Type', 'text/plain')
-			->body(new Boom\RobotsFile());
+		return (new Response())
+			->header('Content-Type', 'text/plain')
+			->setContent(new RobotsFile());
 	}
 }

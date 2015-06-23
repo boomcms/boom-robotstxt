@@ -11,6 +11,5 @@ Route::group([
 		'BoomCMS\Core\Http\Middleware\RequireLogin'
 	]
 ], function () {
-	Route::get('robots', 'Robots@view');
-	Route::post('robots', 'Robots@save');
+	Route::controller('robots', 'Robots');
 });

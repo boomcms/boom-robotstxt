@@ -1,5 +1,5 @@
 	<?= View::make('boom::header', ['title' => 'Robotst.txt file']) ?>
-	<?= $menu ?>
+	<?= $menu()->render() ?>
 
 	<div id="b-topbar" class="b-toolbar">
 		<?= $menuButton() ?>
@@ -8,17 +8,9 @@
 
 	<div id="b-robots">
 		<form>
-            <textarea name="rules"><?= $rules ?></textarea>
+            <textarea name="rules" style="position: absolute; margin: 10px; border: 1px solid #222"><?= $rules ?></textarea>
 		</form>
 	</div>
-
-	<style type="text/css">
-		textarea {
-			position: absolute;
-			margin: 10px;
-			border: 1px solid #222;
-		}
-	</style>
 
 	<?= $boomJS ?>
 	<script type="text/javascript" src="/vendor/boomcms/boom-robotstxt/js/robotsEditor.js"></script>

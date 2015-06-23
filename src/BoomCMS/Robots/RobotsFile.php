@@ -37,7 +37,7 @@ class RobotsFile
 			->orderBy('edited_at', 'desc')
 			->first();
 
-        return isset($results['rules']) ? $results['rules'] : "";
+        return isset($results->rules) ? $results->rules : "";
     }
 
     /**

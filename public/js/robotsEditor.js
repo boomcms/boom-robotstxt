@@ -1,5 +1,5 @@
 $.widget('ui.robotsEditor', {
-	saveUrl : '/cms/robots/save',
+	saveUrl : '/cms/robots',
 
 	_create : function() {
 		this.bind();

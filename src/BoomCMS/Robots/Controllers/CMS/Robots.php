@@ -26,15 +26,15 @@ class Robots extends Controller
 		$this->authorization('manage_robots');
 	}
 
-    public function index()
+    public function getIndex()
     {
-        return View::make('boom:robots.index', [
+        return View::make('boom::robots.index', [
            'rules' => $this->robotsFile->getProductionRules(),
         ]);
     }
 
-    public function save()
+    public function postIndex()
     {
-        $this->robotsFile->saveRules($this->request->input('rules'), $this->person);
+        $this->robotsFile->saveRules($this->request->input('rules'), $this->auth->getPerson());
     }
 }

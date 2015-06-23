@@ -21,7 +21,7 @@ class ServiceProvider extends BaseServiceProvider
 			__DIR__ . '/../../../public' => public_path('vendor/boomcms/boom-robotstxt'),
 			__DIR__ . '/../../database/migrations' => base_path('/migrations/boomcms'),
 		], 'boomcms');
-		
+				
         include __DIR__ . '/../../routes.php';
     }
 
@@ -31,6 +31,6 @@ class ServiceProvider extends BaseServiceProvider
 	 */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../../config/boomcms.php', 'boomcms');
+        $this->mergeConfigFrom(__DIR__ . '/../../config/menu.php', 'boomcms.menu');
     }
 }
