@@ -19,7 +19,7 @@ class ServiceProvider extends BaseServiceProvider
 
         $this->publishes([
 			__DIR__ . '/../../../public' => public_path('vendor/boomcms/boom-robotstxt'),
-			__DIR__ . '/../../database/migrations' => database_path('/migrations/boomcms'),
+			__DIR__ . '/../../database/migrations' => base_path('/migrations/boomcms'),
 		], 'boomcms');
 		
         include __DIR__ . '/../../routes.php';
