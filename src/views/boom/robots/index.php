@@ -1,9 +1,9 @@
-	<?= View::factory('boom/header', array('title' => 'Robots.txt Editor'))?>
+	<?= View::factory('boom/header', ['title' => 'Robots.txt Editor'])?>
 	<?= new \Boom\Menu\Menu ?>
 
 	<div id="b-topbar" class="b-toolbar">
 		<?= new \Boom\UI\MenuButton() ?>
-		<?= new \Boom\UI\Button('accept', __('Save'), array('id' => 'b-robots-save', 'class' => 'b-button-withtext')) ?>
+		<?= new \Boom\UI\Button('accept', __('Save'), ['id' => 'b-robots-save', 'class' => 'b-button-withtext']) ?>
 	</div>
 
 	<div id="b-robots">

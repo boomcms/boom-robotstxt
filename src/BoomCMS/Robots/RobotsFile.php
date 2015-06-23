@@ -63,12 +63,12 @@ class RobotsFile
      */
     public function saveRules($rules, Person $person)
     {
-        DB::insert('robots', array('rules', 'edited_by', 'edited_at'))
-            ->values(array(
+        DB::insert('robots', ['rules', 'edited_by', 'edited_at'])
+            ->values([
                 trim(strip_tags($rules)),
                 $person->getId(),
                 time()
-            ))
+            ])
             ->execute();
 
         return $this;

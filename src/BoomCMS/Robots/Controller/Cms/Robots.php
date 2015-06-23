@@ -19,9 +19,9 @@ class Controller_Cms_Robots extends Controller_Cms
 
     public function action_index()
     {
-        $this->template = new View('boom/robots/index', array(
+        $this->template = new View('boom/robots/index', [
            'rules' => $this->robotsFile->getProductionRules(),
-        ));
+        ]);
     }
 
     public function action_save()

@@ -20,7 +20,7 @@ $.widget('ui.robotsEditor', {
 	},
 
 	save : function() {
-		$.boom.post(this.saveUrl, this.element.find('form').serialize())
+		$.post(this.saveUrl, this.element.find('form').serialize())
 			.done(function() {
 				new boomNotification('Robots.txt rules saved');
 			});
