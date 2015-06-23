@@ -3,7 +3,6 @@
 namespace BoomCMS\Robots;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
-use Illuminate\Routing\Router;
 
 class ServiceProvider extends BaseServiceProvider
 {
@@ -12,7 +11,7 @@ class ServiceProvider extends BaseServiceProvider
 	 *
 	 * @return void
 	 */
-    public function boot(Router $router)
+    public function boot()
     {
         $this->loadViewsFrom(__DIR__ . '/../../views/boom', 'boom');
 		$this->loadTranslationsFrom(__DIR__ . '/../../lang', 'boom');
