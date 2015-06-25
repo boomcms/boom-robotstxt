@@ -18,7 +18,7 @@ class RobotstxtEditor extends Migration
             $table->increments('id');
 			$table->text('rules', 65535)->nullable();
 			$table->integer('edited_at')->unsigned()->nullable();
-			$table->smallInteger('edited_by')->unsigned()->nullable();
+			$table->integer('edited_by')->unsigned()->nullable();
 			
 			$table
                     ->foreign('edited_by')
