@@ -5,7 +5,7 @@ use Illuminate\Database\Migrations\Migration;
 
 use Illuminate\Support\Facades\DB;
 
-class RobotstxtEditor extends Migration
+class InstallRobotstxtEditor extends Migration
 {
     /**
 	 * Run the migrations.
