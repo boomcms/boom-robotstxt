@@ -3,7 +3,7 @@
 
 	<div id="b-topbar" class="b-toolbar">
 		<?= $menuButton() ?>
-		<?= $button('accept', 'Save', ['id' => 'b-robots-save', 'class' => 'b-button-withtext']) ?>
+		<?= $button('check', 'Save', ['id' => 'b-robots-save', 'class' => 'b-button-withtext']) ?>
 	</div>
 
 	<div id="b-robots">
