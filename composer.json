@@ -2,7 +2,7 @@
     "name": "boomcms/boom-robotstxt",
     "description": "robots.txt generator for BoomCMS",
     "require": {
-        "boomcms/boom-core": "3.*",
+        "boomcms/boom-core": ">=3.0",
         "illuminate/support": "~5.0"
     },
     "require-dev": {
