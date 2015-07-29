@@ -16,7 +16,7 @@
         }
     ],
 	"autoload": {
-		"psr-4": {"BoomCMS\\": "src/"}
+		"psr-4": {"BoomCMS\\": "src/BoomCMS/"}
 	},
     "minimum-stability": "dev"
 }
