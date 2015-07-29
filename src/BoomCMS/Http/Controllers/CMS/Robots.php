@@ -1,10 +1,10 @@
 <?php
 
-namespace BoomCMS\Robots\Controllers\CMS;
+namespace BoomCMS\Http\Controllers\CMS;
 
 use BoomCMS\Robots\RobotsFile;
 use BoomCMS\Core\Auth\Auth;
-use BoomCMS\Core\Controllers\Controller;
+use BoomCMS\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;

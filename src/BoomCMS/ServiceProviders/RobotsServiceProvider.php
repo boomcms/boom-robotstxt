@@ -1,10 +1,10 @@
 <?php
 
-namespace BoomCMS\Robots;
+namespace BoomCMS\ServiceProviders;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
-class ServiceProvider extends BaseServiceProvider
+class RobotsServiceProvider extends BaseServiceProvider
 {
     /**
 	 * Bootstrap any application services.

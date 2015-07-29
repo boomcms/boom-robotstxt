@@ -16,7 +16,7 @@
         }
     ],
 	"autoload": {
-		"psr-0": {"BoomCMS\\Robots": "src/"}
+		"psr-4": {"BoomCMS\\": "src/"}
 	},
     "minimum-stability": "dev"
 }

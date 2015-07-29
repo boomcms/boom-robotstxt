@@ -1,6 +1,6 @@
 <?php
 
-namespace BoomCMS\Robots\Controllers;
+namespace BoomCMS\Http\Controllers;
 
 use BoomCMS\Robots\RobotsFile;
 use Illuminate\Http\Response;
