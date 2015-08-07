@@ -8,10 +8,10 @@ use Illuminate\Routing\Controller;
 
 class Robots extends Controller
 {
-	public function view()
-	{
-		return (new Response())
-			->header('Content-Type', 'text/plain')
-			->setContent(new RobotsFile());
-	}
+    public function view()
+    {
+        return (new Response())
+            ->header('Content-Type', 'text/plain')
+            ->setContent(new RobotsFile());
+    }
 }
