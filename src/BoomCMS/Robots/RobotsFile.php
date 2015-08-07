@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\DB;
 class RobotsFile
 {
     /**
-     *
      * @return string
      */
     public function __toString()
@@ -18,7 +17,6 @@ class RobotsFile
     }
 
     /**
-     *
      * @return string
      */
     public function getDevelopmentRules()
@@ -27,44 +25,42 @@ class RobotsFile
     }
 
     /**
-     *
      * @return string
      */
     public function getProductionRules()
     {
         $results = DB::table('robots')
-			->select('rules')
-			->orderBy('edited_at', 'desc')
-			->first();
+            ->select('rules')
+            ->orderBy('edited_at', 'desc')
+            ->first();
 
-        return isset($results->rules) ? $results->rules : "";
+        return isset($results->rules) ? $results->rules : '';
     }
 
     /**
-     *
      * @return string
      */
     public function render()
     {
         return (App::environment('production')) ?
-			$this->getProductionRules()
-			: $this->getDevelopmentRules();
+            $this->getProductionRules()
+            : $this->getDevelopmentRules();
     }
 
     /**
-     *
      * @param string $rules
      * @param Person $person
+     *
      * @return RobotsFile
      */
     public function saveRules($rules, Person $person)
     {
-		DB::table('robots')
-			->insert([
-				'rules' => trim(strip_tags($rules)),
-				'edited_by' => $person->getId(),
-				'edited_at' => time(),
-			]);
+        DB::table('robots')
+            ->insert([
+                'rules'     => trim(strip_tags($rules)),
+                'edited_by' => $person->getId(),
+                'edited_at' => time(),
+            ]);
 
         return $this;
     }
