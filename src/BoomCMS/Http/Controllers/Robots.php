@@ -4,9 +4,9 @@ namespace BoomCMS\Http\Controllers;
 
 use BoomCMS\Robots\RobotsFile;
 use Illuminate\Http\Response;
-use Illuminate\Routing\Controller;
+use Illuminate\Routing\Controller as BaseController;
 
-class Robots extends Controller
+class Robots extends BaseController
 {
     public function view()
     {
