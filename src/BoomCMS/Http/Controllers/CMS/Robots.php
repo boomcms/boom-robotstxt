@@ -6,7 +6,6 @@ use BoomCMS\Core\Auth\Auth;
 use BoomCMS\Http\Controllers\Controller;
 use BoomCMS\Robots\RobotsFile;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\View;
 
 class Robots extends Controller
 {
@@ -26,7 +25,7 @@ class Robots extends Controller
 
     public function getIndex()
     {
-        return View::make('boom::robots.index', [
+        return view('boomcms::robots.index', [
            'rules' => $this->robotsFile->getProductionRules(),
         ]);
     }

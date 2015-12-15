@@ -1,5 +1,5 @@
-	<?= View::make('boom::header', ['title' => 'Robotst.txt file']) ?>
-	<?= $menu()->render() ?>
+	<?= view('boomcms::header', ['title' => 'Robotst.txt file']) ?>
+	<?= $menu() ?>
 
 	<div id="b-topbar" class="b-toolbar">
 		<?= $menuButton() ?>

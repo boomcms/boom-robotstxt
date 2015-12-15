@@ -13,8 +13,8 @@ class RobotsServiceProvider extends BaseServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__.'/../../views/boom', 'boom');
-        $this->loadTranslationsFrom(__DIR__.'/../../lang', 'boom');
+        $this->loadViewsFrom(__DIR__.'/../../views/boomcms', 'boomcms');
+        $this->loadTranslationsFrom(__DIR__.'/../../lang', 'boomcms');
 
         $this->publishes([
             __DIR__.'/../../../public'           => public_path('vendor/boomcms/boom-robotstxt'),
