@@ -2,7 +2,7 @@
 
 namespace BoomCMS\Robots;
 
-use BoomCMS\Core\Person\Person;
+use BoomCMS\Contracts\Models\Person;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\DB;
 
