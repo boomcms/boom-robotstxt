@@ -3,9 +3,9 @@
 return [
     'robots' => [
         'title'    => 'Edit robots.txt',
-        'url'      => '/cms/robots',
+        'url'      => '/boomcms/robots',
         'priority' => 10,
-        'role'     => 'manage_robots',
+        'role'     => 'manageRobots',
         'icon'     => 'edit',
     ],
 ];

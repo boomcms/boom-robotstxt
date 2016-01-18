@@ -3,7 +3,7 @@
 Route::get('robots.txt', 'BoomCMS\Http\Controllers\Robots@view');
 
 Route::group([
-    'prefix'     => 'cms',
+    'prefix'     => 'boomcms',
     'namespace'  => 'BoomCMS\Http\Controllers\CMS',
     'middleware' => [
         'BoomCMS\Http\Middleware\DisableHttpCacheIfLoggedIn',

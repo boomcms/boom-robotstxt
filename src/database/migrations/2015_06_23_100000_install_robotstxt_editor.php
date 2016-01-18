@@ -30,7 +30,7 @@ class InstallRobotstxtEditor extends Migration
 
         DB::table('roles')
             ->insert([
-                'name' => 'manage_robots',
+                'name' => 'manageRobots',
             ]);
     }
 
