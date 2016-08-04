@@ -6,9 +6,8 @@ Route::group([
     'prefix'     => 'boomcms',
     'namespace'  => 'BoomCMS\Http\Controllers\CMS',
     'middleware' => [
-        'BoomCMS\Http\Middleware\DisableHttpCacheIfLoggedIn',
-        'BoomCMS\Http\Middleware\DefineCMSViewSharedVariables',
-        'BoomCMS\Http\Middleware\RequireLogin',
+        'web',
+        BoomCMS\Http\Middleware\DefineCMSViewSharedVariables::class,
     ],
 ], function () {
     Route::controller('robots', 'Robots');

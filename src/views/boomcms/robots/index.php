@@ -1,4 +1,4 @@
-	<?= view('boomcms::header', ['title' => 'Robotst.txt file']) ?>
+	<?= view('boomcms::header', ['title' => 'Robotst.txt file'])->render() ?>
 	<?= $menu() ?>
 
 	<div id="b-topbar" class="b-toolbar">
@@ -12,16 +12,12 @@
 		</form>
 	</div>
 
-	<?= $boomJS ?>
 	<script type="text/javascript" src="/vendor/boomcms/boom-robotstxt/js/robotsEditor.js"></script>
-	<script type="text/javascript">
-		//<![CDATA[
-		(function($){
-			$.boom.init();
 
-			$('body').robotsEditor();
-		})(jQuery);
-		//]]>
-	</script>
+    <script type="text/javascript">
+        window.onload = function() {
+            $('body').robotsEditor();
+        };
+    </script>
 </body>
 </html>
