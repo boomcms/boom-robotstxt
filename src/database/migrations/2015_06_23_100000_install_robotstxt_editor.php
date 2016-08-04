@@ -25,7 +25,6 @@ class InstallRobotstxtEditor extends Migration
                     ->on('people')
                     ->onUpdate('CASCADE')
                     ->onDelete('set null');
-
         });
 
         DB::table('roles')
