@@ -10,7 +10,7 @@ class Robots extends Controller
 {
     protected $role = 'manageRobots';
 
-    public function getIndex()
+    public function index()
     {
         $file = new RobotsFile();
 
@@ -19,7 +19,7 @@ class Robots extends Controller
         ]);
     }
 
-    public function postIndex(Request $request)
+    public function store(Request $request)
     {
         $file = new RobotsFile();
         $file->saveRules($request->input('rules'), auth()->user());

@@ -10,5 +10,5 @@ Route::group([
         BoomCMS\Http\Middleware\DefineCMSViewSharedVariables::class,
     ],
 ], function () {
-    Route::controller('robots', 'Robots');
+    Route::resource('robots', 'Robots');
 });
