@@ -6,7 +6,8 @@
         "illuminate/support": "~5.0"
     },
     "require-dev": {
-        "boomcms/boom-core": "dev-master"
+        "boomcms/boom-core": "dev-master",
+        "boomcms/boom-core": "dev-staging"
     },
     "license": "MIT",
     "authors": [
